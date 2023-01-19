@@ -1,0 +1,899 @@
+<html>
+    <head>
+        <!--Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" ></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+        <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+        
+        <title>
+            TECMIS-FOT
+        </title>
+        <style>
+            body{
+                font-family: candara;
+                background: linear-gradient(90deg, rgba(247,247,247,1) 0%, rgba(238,238,238,1) 0%, rgba(245,244,244,1) 100%);
+            }
+            .selrow{
+                 margin-top:5%;
+            }
+            .myPro{
+                border-radius: 50%;
+                width:200px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+            .mentorD{
+                background: white;
+                margin-top:5%;
+                margin-right:5%;
+                padding-top: 10px;
+                padding-left: 20px;
+                border-radius: 5px;
+                outline: 2px solid #b0986d;
+                outline-offset: 5px; 
+            }
+            .details{
+                margin-top:40px;
+                margin-left: 10px;
+            }
+            .tdOne{
+                color:gray;
+                
+            }
+            .btnload{
+                background: lightgrey;
+                color:grey;
+            }
+            .vM{
+                display: none;
+            }
+            .dd{
+                background: radial-gradient(circle, rgba(74,198,157,1) 0%, rgba(47,130,108,1) 51%, rgba(16,17,17,1) 100%);
+                color:white;
+                font-weight: bold;
+                border-radius: 20px;
+            }
+            .dd:hover{
+                background: radial-gradient(circle, rgba(13,13,13,0.989233193277311) 1%, rgba(6,73,66,1) 50%, rgba(25,88,65,1) 100%);
+                color:white;
+                font-weight: bold;
+                border-radius: 20px;
+            }
+            #ER{
+                height: 150px;
+                width: 200px;
+                padding-top: 60px;
+                
+            }
+            #CR{
+                height: 150px;
+                width: 200px;
+                padding-top: 60px;
+            }
+            #VR{
+                height: 150px;
+                width: 200px;
+                padding-top: 60px;
+            }
+            #PR{
+                height: 150px;
+                width: 200px;
+                padding-top: 60px;
+            }
+            .hDet{
+                font-size: 20px;
+            }
+            .btI{
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+            }
+            .result{
+                border-radius: 5px;
+                outline: 2px solid #b0986d;
+                outline-offset: 5px; 
+                margin-top: 5%;
+            }
+            .luck {
+              animation: blinker 1s linear infinite;
+            }
+
+            @keyframes blinker {
+              50% {
+                opacity: 0;
+              }
+            }
+            
+            /*footer*/
+            .imgCol{
+                background-image: url(Source/download.jfif);
+                overflow: hidden;
+                opacity: 0.6;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                border-radius: 10px;
+            }
+            .fixedFooter{
+                width: 100%;
+                background-color: rgb(0, 0, 0);
+                height: 7%;
+                color:white;
+                text-align: center;
+                font-size: 15px;
+                padding-top:1%;
+                position: fixed;
+                bottom: 0;
+            }
+            .topFooter{
+
+                bottom: 10%;
+                padding: 2% 0 2% 0;
+                width: 100%;
+                background: linear-gradient(90deg, rgba(55,57,57,1) 0%, rgba(17,98,77,1) 55%, rgba(2,78,63,1) 100%);
+                color:white;
+            }
+            .link{
+                color:white;
+                font-size: 14px;
+                text-decoration: none;
+            }
+            .link:hover{
+                text-decoration: underline;
+                color: white;
+            }
+            .link:active{
+                color: white;
+            }
+            .active{
+                text-decoration: underline;
+                font-weight: bold;  
+            }
+            .navPro{
+                border-radius: 50%;
+                width:40px;
+                margin-right: 10px;
+            }
+            .logoutMe{
+                position: absolute;
+                left:88%;
+                top:4%;
+            }
+            .logoutMe:hover{
+                color:red;  
+                font-weight: bold;
+                
+            }
+            .labelBottom{
+                font-size: 12px;   
+            }
+            .dAref{
+                color: black;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <header class="p-3 bg-dark text-white">
+        <div class="row">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+            </a>
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <img src="Source/pro.jfif" class="navPro">
+              <li><a href="#" class="nav-link px-2 text-white active">DASHBOARD</a></li>
+              <li><a href="notice.html" class="nav-link px-2 text-white position-relative">
+                NOTICE
+              <span class="position-absolute top-10 start-95 translate-middle p-1 bg-danger border border-light rounded-circle">
+                <span class="visually-hidden">New alerts</span>
+              </span>
+                 </a></li>
+              <li><a href="food.html" class="nav-link px-2 text-white">FOOD ORDER</a></li>
+              <li><a href="attendence.html" class="nav-link px-2 text-white">ATTENDENCE</a></li>
+            </ul>
+              <div class="" style="position: absolute;left:48%;font-size: 25px;">TECMIS</div>
+              <div class="col-md-5">
+                <div>
+                    <a href="" class="nav-link px-2 text-white logoutMe"  data-bs-toggle="modal" data-bs-target="#exampleModal">LOGOUT</a>
+                  </div>
+                <div class="text-end">
+
+                  <img src="Source/logo.png" class="logo" style="width: 10%;">
+                </div>
+              </div>
+                  
+          </div>
+        </div>
+      </header>
+         <!-- Modal logout-->
+        <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">LOGOUT</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 offset-1" ><button type="button" style="width:100%;" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button></div>
+                        <div class="col-md-4 offset-1" ><a type="button" href="index.html" class="btn btn-danger" data-bs-dismiss="modal" style="width:100%;">LOGOUT</a></div></div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="">
+            <div class="row">
+                
+                <div class="col-md-8">
+                    <div class="container">
+                        <div class="row selRow">
+                            <div class="col-md-3 dd text-center" id="ER" onclick="detailsFun(this.id)" style="margin-right:1%;">EXAM REGISTATION</div>
+                            <div class="col-md-3 dd text-center" id="CR" onclick="detailsFun(this.id)" style="margin-right:1%;">COURSE REGISTATION</div>
+                            <div class="col-md-3 dd text-center" id="VR" onclick="detailsFun(this.id)" style="margin-right:1%;">VIEW RESULT</div>
+                            <div class="col-md-3 dd text-center" id="PR" onclick="detailsFun(this.id)">DOWNLOAD PASSPAPER</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 text-center" style="padding-top:5%">
+                                <h3 class="ERH" style="display: none;">EXAM REGISTATION</h3>
+                                <h3 class="CRH" style="display: none;">COURSE REGISTATION</h3>
+                                <h3 class="VRH" style="display: none;">VIEW RESULT</h3>
+                                <h3 class="PWD" style="display: none;">PASSPAPERS</h3>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="row" style="padding-bottom: 2%;font-weight: 800">
+                                    <div class="col-md-12 text-center erTopic" style="display: none;">
+                                        <span>EXAM REGISTRATION FOR LEVEL 3 SEMESTER 1</span>
+                                    </div>
+                                </div>
+                                <table class="table table-striped table-light table-hover tableER" style="display: none">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col" style="width: 15%">SUBJECT ID</th>
+                                      <th scope="col" style="width:35%;">NAME</th>
+                                      <th scope="col"  class="text-center" style="width:10%;">CREDITS</th>
+                                      <th scope="col"  class="text-center" style="width: 20%;">STATUS</th>
+                                      <th scope="col"  class="text-center" style="width: 15%;">REGISTER</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row" >ENG3122</th>
+                                      <td>English V</td>
+                                      <td  class="text-center">2</td>
+                                      <td  class="text-center">Degree</td>
+                                      <td  class="text-center"><button class="btn btn-primary btI" >REGISTER</button></td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row" >ICT3113</th>
+                                      <td>Advanced Programming in Java/C++</td>
+                                      <td  class="text-center">3</td>
+                                      <td  class="text-center">Degree</td>
+                                      <td  class="text-center"><button class="btn btn-primary btI" >REGISTER</button></td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row" >ICT3123</th>
+                                      <td>IT Project Management</td>
+                                      <td  class="text-center">3</td>
+                                      <td  class="text-center">Degree</td>
+                                      <td  class="text-center"><button class="btn btn-primary btI" >REGISTER</button></td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row" >ICT3132</th>
+                                      <td>Software Testing Methods and Tools</td>
+                                      <td  class="text-center">2</td>
+                                      <td  class="text-center">Degree</td>
+                                      <td  class="text-center"><button class="btn btn-primary btI" >REGISTER</button></td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row" >ICT3142</th>
+                                      <td>Mobile Computing Principles</td>
+                                      <td  class="text-center">2</td>
+                                      <td  class="text-center">Degree</td>
+                                      <td  class="text-center"><button class="btn btn-primary btI" >REGISTER</button></td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row" >ICT3152</th>
+                                      <td>Human Computer Interaction</td>
+                                      <td  class="text-center">2</td>
+                                      <td  class="text-center">Degree</td>
+                                      <td  class="text-center"><button class="btn btn-primary btI" >REGISTER</button></td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row" >ICT3162</th>
+                                      <td>Rapid and Agile Software Development</td>
+                                      <td  class="text-center">2</td>
+                                      <td  class="text-center">Degree</td>
+                                      <td  class="text-center"><button class="btn btn-primary btI" >REGISTER</button></td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row" >ICT3173</th>
+                                      <td>Group Project</td>
+                                      <td  class="text-center">2</td>
+                                      <td  class="text-center">Degree</td>
+                                      <td  class="text-center"><button class="btn btn-primary btI" >REGISTER</button></td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row" >TCS3131</th>
+                                      <td>Human Resource Management	</td>
+                                      <td  class="text-center">1</td>
+                                      <td  class="text-center">Degree</td>
+                                      <td  class="text-center"><button class="btn btn-primary btI" >REGISTER</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center" colspan="2">Total Credits</td>
+                                        <td class="text-center" style="color:blue;font-weight: bold">19</td>
+                                        <td colspan="2" class="text-center"><button class="btn btn-dark" onclick="reg()">REGISTER ALL</button></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        
+                        <!--Course Registration-->
+                        <div class="container">
+                            <div class="row">
+                                <div class="row" style="padding-bottom: 2%;font-weight: 800">
+                                    <div class="col-md-12 text-center crTopic" style="display: none;">
+                                        <spa>COURSE REGISTRATION FOR LEVEL 3 SEMESTER 2</spa>
+                                    </div>
+                                </div>
+                                <table class="table table-striped table-light table-hover tableCR" style="display: none">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col" style="width: 15%">SUBJECT ID</th>
+                                      <th scope="col" style="width:35%;">NAME</th>
+                                      <th scope="col"  class="text-center" style="width:10%;">CREDITS</th>
+                                      <th scope="col"  class="text-center" style="width: 20%;">STATUS</th>
+                                      <th scope="col"  class="text-center" style="width: 15%;">REGISTER</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row" >ENG3122</th>
+                                      <td>English V</td>
+                                      <td  class="text-center">2</td>
+                                      <td  class="text-center">Degree</td>
+                                      <td  class="text-center"><button class="btn btn-primary btI" >REGISTER</button></td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row" >ICT3113</th>
+                                      <td>Advanced Programming in Java/C++</td>
+                                      <td  class="text-center">3</td>
+                                      <td  class="text-center">Degree</td>
+                                      <td  class="text-center"><button class="btn btn-primary btI" >REGISTER</button></td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row" >ICT3123</th>
+                                      <td>IT Project Management</td>
+                                      <td  class="text-center">3</td>
+                                      <td  class="text-center">Degree</td>
+                                      <td  class="text-center"><button class="btn btn-primary btI" >REGISTER</button></td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row" >ICT3132</th>
+                                      <td>Software Testing Methods and Tools</td>
+                                      <td  class="text-center">2</td>
+                                      <td  class="text-center">Degree</td>
+                                      <td  class="text-center"><button class="btn btn-primary btI" >REGISTER</button></td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row" >ICT3142</th>
+                                      <td>Mobile Computing Principles</td>
+                                      <td  class="text-center">2</td>
+                                      <td  class="text-center">Degree</td>
+                                      <td  class="text-center"><button class="btn btn-primary btI" >REGISTER</button></td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row" >ICT3152</th>
+                                      <td>Human Computer Interaction</td>
+                                      <td  class="text-center">2</td>
+                                      <td  class="text-center">Degree</td>
+                                      <td  class="text-center"><button class="btn btn-primary btI" >REGISTER</button></td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row" >ICT3162</th>
+                                      <td>Rapid and Agile Software Development</td>
+                                      <td  class="text-center">2</td>
+                                      <td  class="text-center">Degree</td>
+                                      <td  class="text-center"><button class="btn btn-primary btI" >REGISTER</button></td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row" >ICT3173</th>
+                                      <td>Group Project</td>
+                                      <td  class="text-center">2</td>
+                                      <td  class="text-center">Degree</td>
+                                      <td  class="text-center"><button class="btn btn-primary btI" >REGISTER</button></td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row" >TCS3131</th>
+                                      <td>Human Resource Management	</td>
+                                      <td  class="text-center">1</td>
+                                      <td  class="text-center">Degree</td>
+                                      <td  class="text-center"><button class="btn btn-primary btI" >REGISTER</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center" colspan="2">Total Credits</td>
+                                        <td class="text-center" style="color:blue;font-weight: bold">19</td>
+                                        <td colspan="2" class="text-center"><button class="btn btn-dark" onclick="regC()">REGISTER ALL</button></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                         <!--View Result-->
+                        <div class="container">
+                            <div class="row">
+                                <div class="row" style="padding-bottom: 2%;font-weight: 800">
+                                    <div class="col-md-12 text-center vrTopic" style="display: none;">
+                                        <span>VIEW YOUR RESULTS</span>
+                                    </div>
+                                </div>
+                                <div class="row" style="display: none" id="resultSet">
+                                    <div class="col-md-6">
+                                        <label for="exampleInputEmail1">SELECT ACADEMIC YEAR</label>
+                                        <select class="form-control">
+                                            <option selected>SELECT THE LEVEL</option>
+                                            <option >LEVEL 1</option>
+                                            <option >LEVEL 2</option>
+                                            <option >LEVEL 3</option>
+                                            <option >LEVEL 4</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="exampleInputEmail1">SELECT SEMESTER</label>
+                                        <select class="form-control" id="mySem" onchange="myChange()">
+                                            <option selected >SELECT THE SEMESTER</option>
+                                            <option value="sem1">SEMESTER 1</option>
+                                            <option value="sem2">SEMESTER 2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                                <!--Sem 1-->
+                                <div class="container">
+                                    <div class="result" style="display: none;" id="sem1">
+                                        <div class="row text-center"><h3>LEVEL 1 SEMESTER 1</h3></div>
+                                        <div class="container" >
+                                            <div class="row">
+                                                <table class="table" >
+                                                    <thead class="thead-dark">
+                                                        <tr>
+                                                            <td>Subject ID</td>
+                                                            <td>Subject Name</td>
+                                                            <td class="text-center">Result</td>
+                                                            <td class="text-center">Credits</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tr>
+                                                        <td>ICT1123</td>
+                                                        <td>Subject 2</td>
+                                                        <td class="text-center">A+</td>
+                                                        <td class="text-center">3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>ICT1133</td>
+                                                        <td>Subject 3</td>
+                                                        <td class="text-center">B+</td>
+                                                        <td class="text-center">3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>ICT1143</td>
+                                                        <td>Subject 4</td>
+                                                        <td class="text-center">A-</td>
+                                                        <td class="text-center">3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>ICT1153</td>
+                                                        <td>Subject 5</td>
+                                                        <td class="text-center">A</td>
+                                                        <td class="text-center">3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>TCS1162</td>
+                                                        <td>Subject 6</td>
+                                                        <td class="text-center">A+</td>
+                                                        <td class="text-center">2</td>
+                                                    </tr>
+                                                </table>
+                                                <div class="row text-center">
+                                                    <p>YOUR SGPA IS: <span style="color:red">3.84</span></p>
+                                                    <p class="luck" style="color:blue;font-weight: bold;">Good Luck!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Sem 2-->
+                                <div class="container">
+                                    <div class="result" style="display: none;" id="sem2">
+                                        <div class="row text-center"><h3>LEVEL 1 SEMESTER 2</h3></div>
+                                        <div class="container">
+                                            <div class="row">
+                                                <table class="table" >
+                                                    <thead class="thead-dark">
+                                                        <tr>
+                                                            <td>Subject ID</td>
+                                                            <td>Subject Name</td>
+                                                            <td class="text-center">Result</td>
+                                                            <td class="text-center">Credits</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tr>
+                                                        <td>ICT1223</td>
+                                                        <td>Subject 2</td>
+                                                        <td class="text-center">A+</td>
+                                                        <td class="text-center">3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>ICT1233</td>
+                                                        <td>Subject 3</td>
+                                                        <td class="text-center">B+</td>
+                                                        <td class="text-center">3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>ICT1243</td>
+                                                        <td>Subject 4</td>
+                                                        <td class="text-center">A-</td>
+                                                        <td class="text-center">3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>ICT1253</td>
+                                                        <td>Subject 5</td>
+                                                        <td class="text-center">A</td>
+                                                        <td class="text-center">3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>TCS1262</td>
+                                                        <td>Subject 6</td>
+                                                        <td class="text-center">A+</td>
+                                                        <td class="text-center">2</td>
+                                                    </tr>
+                                                </table>
+                                                <div class="row text-center">
+                                                    <p>YOUR SGPA IS: <span style="color:red">3.76</span></p>
+                                                    <p class="luck" style="color:blue;font-weight: bold;">Good Luck!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="container" id="pastPP">
+                        <!--Download passpapers-->    
+                        <div class="row" style="padding-bottom: 2%;font-weight: 800">
+                            <div class="col-md-12 text-center ppTopic" style="display: none;">
+                                <span>PAST PAPERS</span>
+                            </div>
+                        </div>
+                        <div class="row mypp" style="display: none;">
+                            <div class="col-md-6">
+                                <label for="">SELECT ACADEMIC YEAR</label>
+                                <select class="form-control">
+                                    <option selected>SELECT THE LEVEL</option>
+                                    <option >LEVEL 1</option>
+                                    <option >LEVEL 2</option>
+                                    <option >LEVEL 3</option>
+                                    <option >LEVEL 4</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="">SELECT SEMESTER</label>
+                                <select class="form-control" id="mySemPP" onchange="myChangePP()">
+                                    <option selected >SELECT THE SEMESTER</option>
+                                    <option value="sem1">SEMESTER 1</option>
+                                    <option value="sem2">SEMESTER 2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="pastpaper" style="display: none;padding-top: 5%;" id="sem1PP">
+                                        <div class="row text-center"><h3>LEVEL 1 SEMESTER 1</h3></div>
+                                        <div class="container" >
+                                            <div class="row">
+                                                <table class="table" >
+                                                    <thead class="thead-dark">
+                                                        <tr>
+                                                            <td>Subject ID</td>
+                                                            <td>Subject Name</td>
+                                                            <td class="text-center">Year</td>
+                                                            <td class="text-center">Paper</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tr>
+                                                        <td>ICT1123</td>
+                                                        <td>Subject 1</td>
+                                                        <td class="text-center">2017</td>
+                                                        <td class="text-center"><a href="" class="dAref">Download</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>ICT1133</td>
+                                                        <td>Subject 2</td>
+                                                        <td class="text-center">2017</td>
+                                                        <td class="text-center"><a href="" class="dAref">Download</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>ICT1143</td>
+                                                        <td>Subject 3</td>
+                                                        <td class="text-center">2017</td>
+                                                        <td class="text-center"><a href="" class="dAref">Download</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>ICT1123</td>
+                                                        <td>Subject 1</td>
+                                                        <td class="text-center">2018</td>
+                                                        <td class="text-center"><a href="" class="dAref">Download</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>ICT1133</td>
+                                                        <td>Subject 2</td>
+                                                       <td class="text-center">2018</td>
+                                                        <td class="text-center"><a href="" class="dAref">Download</a></td>
+                                                    </tr>
+                                                </table>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center mentor">
+                    
+                    <div class="mentorD">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <h3>Mentor Details</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="Source/pro.jfif" class="myPro">
+                            </div>
+                            <div class="col-md-6">
+                                <table class="details">
+                                    <tr>
+                                        <td class="tdOne">Name </td>
+                                    </tr>
+                                    <tr>
+                                        <td><h3 class="hDet">M.Kumar</h3></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tdOne">Department </td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td><h3 class="hDet">ICT</h3></td>
+                                    </tr>
+                                    
+                                    <div class="moreDet" >
+                                        
+                                        <tr class="vM">
+                                            <td class="tdOne">Contact No <i class="fas fa-phone"></i></td>
+
+                                        </tr>
+                                        <tr class="vM">
+                                            <td><h3 class="hDet">0775411234</h3></td>
+                                        </tr>
+                                        <tr class="vM">
+                                            <td class="tdOne">Email <i class="far fa-envelope"></i></td>
+
+                                        </tr>
+                                        <tr class="vM" >
+                                            <td><h3 class="hDet">kumar@gmail.com</h3></td>
+                                        </tr>
+                                    </div>
+                                    <tr>
+                                        <td>
+                                             <button class="btn btn-light btnload" onclick="loadMore()" style="margin-top: 10px;">VIEW MORE</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                   <div style="padding-top:10%;">
+                       <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modelChangePw" >CHANGE PASSWORD</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade " id="modelChangePw" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">CHANGE PASSWORD</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label>
+                                Current Password
+                            </label>
+                            <input type="password" class="form-control">
+                            <label class="labelBottom">Enter your current password</label>
+                            
+                            <br>
+                             <label style="padding-top: 3%">
+                                Enter New Password
+                            </label>
+                            <input type="password" class="form-control">
+                            <label class="labelBottom">Enter your new password</label>
+                            
+                            <br>
+                            <label  style="padding-top: 3%">
+                                Re-Enter New Password
+                            </label>
+                            <input type="password" class="form-control" style="">
+                            <label class="labelBottom">Re-Enter your new password</label>
+                        </div>
+                    </div>
+                        <div class="row"  style="padding-top: 6%">
+                            <div class="col-md-4 offset-1" ><button type="button" style="width:100%;" class="btn btn-secondary" data-bs-dismiss="modal">CLEAR</button></div>
+                            <div class="col-md-4 offset-1" ><a type="button" href="index.html" class="btn btn-success" data-bs-dismiss="modal" style="width:100%;" onclick="functionpw()">CHANGE</a></div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        
+        <script>
+            function reg(){
+                alert("All Exams registered");
+            }
+            function regC(){
+                alert("All Courses registered");
+            }
+            function functionpw(){
+                alert("Password Changed");
+            }
+            VanillaTilt.init(document.querySelectorAll(".dd"), {
+            max: 30,
+            speed: 10,
+                glare: false,
+                  maxGlare: .05,
+                scale: 1.05
+            });    
+            function loadMore(){
+                $(".vM").toggle(1000);
+                $('.btnload').text($('.btnload').text() == 'Hide' ? 'View More' : 'Hide');
+            }
+            function myChange(){
+                var sem=document.getElementById("mySem").value;
+                switch(sem){
+                    case "sem1":
+                        $("#sem2").hide(1000);
+                        $("#sem1").toggle(1000);
+                    break;
+                    case "sem2":
+                        $("#sem1").hide(1000);
+                        $("#sem2").toggle(1000);
+                    break;
+                }
+            }
+            function myChangePP(){
+                $("#sem1PP").show(1000);
+            }
+            function detailsFun(x){
+                switch(x){
+                    case "ER":
+                        $("#sem1").hide(1000);
+                        $("#sem2").hide(1000);
+                        $(".CRH").hide(1000);
+                        $(".tableCR").hide(1000);
+                        $(".crTopic").hide(1000);
+                        $("#resultSet").hide(1000);
+                        $(".vrTopic").hide(1000);
+                        $(".ppTopic").hide(1000);
+                        $(".mypp").hide(1000);
+                        
+                        $(".ERH").toggle(1000);
+                        $(".tableER").toggle(1000);
+                        $(".erTopic").toggle(1000);
+                    break;
+                    case "CR":
+                        $("#sem1").hide(1000);
+                        $("#sem2").hide(1000);
+                        $(".ERH").hide(1000);
+                        $(".tableER").hide(1000);
+                        $(".erTopic").hide(1000);
+                        $("#resultSet").hide(1000);
+                        $(".vrTopic").hide(1000);
+                        $(".ppTopic").hide(1000);
+                        $(".mypp").hide(1000);
+                        
+                        $(".CRH").toggle(1000);
+                        $(".tableCR").toggle(1000);
+                        $(".crTopic").toggle(1000);
+                    break;
+                    case "VR":
+                        $("#sem1").hide(1000);
+                        $("#sem2").hide(1000);
+                        $(".CRH").hide(1000);
+                        $(".tableCR").hide(1000);
+                        $(".crTopic").hide(1000);
+                        $(".ERH").hide(1000);
+                        $(".tableER").hide(1000);
+                        $(".erTopic").hide(1000);
+                        $(".ppTopic").hide(1000);
+                        $(".mypp").hide(1000);
+                        
+                        $("#resultSet").toggle(1000);
+                        $(".vrTopic").toggle(1000);
+                    break;
+                    case "PR":
+                        $("#sem1").hide(1000);
+                        $("#sem2").hide(1000);
+                        $(".CRH").hide(1000);
+                        $(".tableCR").hide(1000);
+                        $(".crTopic").hide(1000);
+                        $(".ERH").hide(1000);
+                        $(".tableER").hide(1000);
+                        $(".erTopic").hide(1000);
+                        $("#resultSet").hide(1000);
+                        $(".vrTopic").hide(1000);
+                        
+                        $(".ppTopic").toggle(1000);
+                        $(".mypp").toggle(1000);
+                }
+            }
+        </script>
+        <div class="row">
+        
+        
+        </div>
+        <div class="footer topFooter" style="margin-top:10%;">
+            <div class="container">
+                <div class="row">
+              
+                    <div class="row">
+                    <div class="col-md-3">
+                      <h3>By Admin</h3>
+                      <p>Welcome to the TECMIS of the faculty of technology, University of Ruhuna</p>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-2">
+                    <h3>Useful Links</h3>
+                    <div><a href="" class="link">TECLIS</a></div>
+                    <div><a href="" class="link">TECHMS</a></div>
+                    <div><a href="" class="link">TECWEB</a></div>
+                    <div><a href="" class="link">Faculty of Technology</a></div>
+                    <div><a href="" class="link">University of Ruhuna</a></div>
+                    </div>
+                    <div class="col-md-3 ">
+                    <img src="Source/logo.png" style="width:100px;margin-left: 100%" class="logoT">
+
+                    </div>
+                    </div>
+            
+                </div>
+              </div>
+          </div>
+          <footer class="fixedFooter">
+              FACULTY OF TECHNNOLOGY - UNIVERSITY OF RUHUNA
+          </footer>
+            
+    </body>
+</html>

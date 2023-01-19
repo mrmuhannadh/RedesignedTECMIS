@@ -1,0 +1,274 @@
+<html>
+    <head>
+        <!--Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" ></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+        <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+        <title>
+            TECMIS-FOT
+        </title>
+        
+        <style>
+            body{
+                font-family: candara;
+                background: radial-gradient(circle, rgba(128,214,197,1) 0%, rgba(123,214,197,1) 100%);
+            }
+            .box{
+                background-color: #fff;
+                height:400px;
+                width: 400px;
+                border-radius: 5%;
+                position: absolute;
+                left:35%;
+                top:10%;
+                background: linear-gradient(0deg, rgba(29,162,116,1) 0%, rgba(0,209,155,1) 55%, rgba(0,214,173,1) 100%);
+            }
+            .md{
+                color:white;
+                font-weight: 800;
+                background: linear-gradient(0deg, rgba(68,80,76,1) 0%, rgba(96,134,124,1) 51%, rgba(91,102,100,1) 100%);        }
+                
+            }
+            .modal-header{
+                color: white;
+            } 
+            .myBox{
+                background: #fff;
+                border-radius: 5px;
+                outline: 2px solid black;
+                outline-offset: 5px; 
+                
+            }
+            .imgCol{
+                background-image: url(Source/download.jfif);
+                overflow: hidden;
+                opacity: 0.9;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                box-shadow: 0 0 8px 8px white inset;
+            }
+            .fixedFooter{
+                width: 100%;
+                background-color: rgb(0, 0, 0);
+                height: 7%;
+                color:white;
+                text-align: center;
+                font-size: 15px;
+                padding-top:1%;
+                position: fixed;
+                bottom: 0;
+            }
+            .topFooter{
+
+                bottom: 10%;
+                padding: 2% 0 2% 0;
+                width: 100%;
+                background: linear-gradient(90deg, rgba(55,57,57,1) 0%, rgba(17,98,77,1) 55%, rgba(2,78,63,1) 100%);
+                color:white;
+            }
+            .link{
+                color:white;
+                font-size: 14px;
+                text-decoration: none;
+            }
+            .link:hover{
+                text-decoration: underline;
+                color: white;
+            }
+            .link:active{
+                color: white;
+            }
+            .loginBtn{
+                color: white;
+                text-decoration: none;
+            }
+            .loginBtn:hover{
+                color: white;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+      <header class="p-3 bg-dark text-white">
+        <div class="row">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+            </a>
+
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">TECLMS</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">TECHMS</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+
+            </ul>
+
+
+            <div class="text-end">
+              <img src="Source/logo.png" class="logo" style="width: 10%;">
+            </div>
+          </div>
+        </div>
+      </header>
+        <div class="row text-end" style="padding-top:2%;padding-right: 2%">
+            <div class="col-md-9">
+            </div>
+            <div class="col-md-3" style="">
+                <button class="btn btn-success btn1" data-bs-toggle="modal" href="#loginModal" role="button">LOGIN</button>
+            </div>
+        </div>
+        <div class="container" style="padding-top: 2%;">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="myBox" style="padding:3% 5% 2% 5%;">
+                        
+                        <div class="row">
+                            <h3 class="topic">TECMIS</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 para" >
+                                <p>
+                                    <b>Welcome to the TECMIS of Faculty of Technology University of Ruhuna</b>
+                               From the TECMIS students can get many advantages. This is specially used to chare the informations with our students. Studnets can view the Notices, View cource details, Register for courses, Register to the Exams, they can order there foods from faculty canteen and they can view their personal and academic details. We expect that we can gie many more valuable features in near future</p>
+                                <p>Thank you for visiting...</p>
+                                    
+                            </div>
+                            <div class="col-md-6 imgCol">
+                            
+                            </div>
+                        
+                        </div>
+                         <div class="row text-end" style="padding-bottom: 2%; padding-right: 2%">
+                            
+                            <div class="col-md-1" style="">
+                                <button class="btn btn-success btn2" data-bs-toggle="modal" href="#loginModal" role="button">LOGIN</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Full screen modal -->
+        <div class="modal fade " tabindex="-1" id="loginModal">
+          <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content md">
+              <div class="modal-header ">
+                <h5 class="modal-title">LOGIN</h5>
+                <button type="button" style="color:red" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body ">
+                <div class="container">
+                    <div class="row">
+                        <div class="box">
+                            <div class="row"  style="padding-top:5%;">
+                                <div class="col-md-12 text-center">
+                                    <h3>LOGIN</h3>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Student ID</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text">Use TG### format</div>
+                                  </div>
+                                  <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                  </div>
+                                  <div class="mb-3 form-check text-center">
+
+                                      <label class="form-check-label" for="exampleCheck1" style="font-size: 15px;"><i>Forgot password?</i></label>
+                                  </div>
+                                    <button type="submit" class="btn btn-dark submit" ><a href="dash.html" class="loginBtn">LOGIN</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+            window.sr = ScrollReveal();
+            sr.reveal('.logo',{
+                duration: 2000,
+                origin: 'right',
+                distance: '10px'
+            });
+            sr.reveal('.nav',{
+                duration: 2000,
+                origin: 'top',
+                distance: '10px'
+            });
+            sr.reveal('.topic',{
+                duration: 4000,
+                origin: 'right',
+                distance: '50px'
+            });
+            sr.reveal('.para',{
+                duration: 2000,
+                origin: 'top',
+                distance: '20px'
+            });
+            sr.reveal('.btn1',{
+                duration: 4000,
+                origin: 'left',
+                distance: '20px'
+            });
+            sr.reveal('.btn2',{
+                duration: 4000,
+                origin: 'top',
+                distance: '40px'
+            });
+            sr.reveal('.imgCol',{
+                duration: 2000,
+                origin: 'right',
+                distance: '40px'
+            });
+            
+        </script>
+        <div class="footer topFooter" style="margin-top:10%;">
+            <div class="container">
+            <div class="row">
+              
+                <div class="row">
+                <div class="col-md-3">
+                  <h3>By Admin</h3>
+                  <p>Welcome to the TECMIS of the faculty of technology, University of Ruhuna</p>
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-2">
+                <h3>Useful Links</h3>
+                <div><a href="" class="link">TECLIS</a></div>
+                <div><a href="" class="link">TECHMS</a></div>
+                <div><a href="" class="link">TECWEB</a></div>
+                <div><a href="" class="link">Faculty of Technology</a></div>
+                <div><a href="" class="link">University of Ruhuna</a></div>
+                </div>
+                <div class="col-md-3 ">
+                <img src="Source/logo.png" style="width:100px;margin-left: 100%" class="logoT">
+
+                </div>
+                </div>
+            
+            </div>
+                  </div>
+          </div>
+          <footer class="fixedFooter">
+              FACULTY OF TECHNNOLOGY - UNIVERSITY OF RUHUNA
+          </footer>
+    </body>
+</html>

@@ -1,0 +1,614 @@
+<html>
+    <head>
+        <!--Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" ></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+        <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+        
+        <title>
+            TECMIS-FOT
+        </title>
+        <style>
+            body{
+                font-family: candara;
+                background: linear-gradient(90deg, rgba(247,247,247,1) 0%, rgba(238,238,238,1) 0%, rgba(245,244,244,1) 100%);
+            }
+            .selrow{
+                 margin-top:5%;
+            }
+            .myPro{
+                border-radius: 50%;
+                width:200px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+            .mentorD{
+                background: white;
+                margin-top:5%;
+                margin-right:5%;
+                padding-top: 10px;
+                padding-left: 20px;
+                border-radius: 5px;
+                outline: 2px solid #b0986d;
+                outline-offset: 5px; 
+            }
+            .details{
+                margin-top:40px;
+                margin-left: 10px;
+            }
+            .tdOne{
+                color:gray;
+                
+            }
+            .btnload{
+                background: lightgrey;
+                color:grey;
+            }
+            .vM{
+                display: none;
+            }
+            .dd{
+                background: radial-gradient(circle, rgba(74,198,157,1) 0%, rgba(47,130,108,1) 51%, rgba(16,17,17,1) 100%);
+                color:white;
+                font-weight: bold;
+                border-radius: 20px;
+            }
+            .dd:hover{
+                background: radial-gradient(circle, rgba(13,13,13,0.989233193277311) 1%, rgba(6,73,66,1) 50%, rgba(25,88,65,1) 100%);
+                color:white;
+                font-weight: bold;
+                border-radius: 20px;
+            }
+            #ER{
+                height: 150px;
+                width: 200px;
+                padding-top: 60px;
+                margin-left:55%;
+            }
+           
+            #VR{
+                height: 150px;
+                width: 200px;
+                padding-top: 60px;
+                margin-left: 5%;
+            }
+            .hDet{
+                font-size: 20px;
+            }
+            .btI{
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+            }
+            .result{
+                border-radius: 5px;
+                outline: 2px solid #b0986d;
+                outline-offset: 5px; 
+                margin-top: 5%;
+            }
+            .luck {
+              animation: blinker 1s linear infinite;
+            }
+
+            @keyframes blinker {
+              50% {
+                opacity: 0;
+              }
+            }
+            
+            /*footer*/
+            .imgCol{
+                background-image: url(Source/download.jfif);
+                overflow: hidden;
+                opacity: 0.6;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                border-radius: 10px;
+            }
+            .fixedFooter{
+                width: 100%;
+                background-color: rgb(0, 0, 0);
+                height: 7%;
+                color:white;
+                text-align: center;
+                font-size: 15px;
+                padding-top:1%;
+                position: fixed;
+                bottom: 0;
+            }
+            .topFooter{
+
+                bottom: 10%;
+                padding: 2% 0 2% 0;
+                width: 100%;
+                background: linear-gradient(90deg, rgba(55,57,57,1) 0%, rgba(17,98,77,1) 55%, rgba(2,78,63,1) 100%);
+                color:white;
+            }
+            .link{
+                color:white;
+                font-size: 14px;
+                text-decoration: none;
+            }
+            .link:hover{
+                text-decoration: underline;
+                color: white;
+            }
+            .link:active{
+                color: white;
+            }
+            .active{
+                text-decoration: underline;
+                font-weight: bold;
+            }
+            .search{
+                margin-top:3%;
+                margin-left:35%;
+            }
+            .navPro{
+                border-radius: 50%;
+                width:40px;
+                margin-right: 10px;
+            }
+            .logoutMe{
+                position: absolute;
+                left:88%;
+                top:4%;
+            }
+            .logoutMe:hover{
+                color:red;  
+                font-weight: bold;
+                
+            }
+            .bg{
+                position: absolute;
+                width: 50%;
+                background: linear-gradient(90deg, rgba(0,1,191,0.989233193277311) 0%, rgba(1,6,125,1) 55%, rgba(0,5,94,1) 100%);
+                height: 35px;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                
+                color:white;
+            }
+            .atTopM{
+                background-color: orange;
+                width: 50%;
+                height: 35px;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                position: absolute;
+                right:50%;
+            }
+            .atTopD{
+                background-color: red;
+                width: 30%;
+                height: 35px;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                position: absolute;
+                right:70%;
+            }
+            .atTopOK{
+                background-color: green;
+                width: 80%;
+                height: 35px;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                position: absolute;
+                right:20%;
+                
+            }
+            .attTopic{
+                font-size: 25px;
+                
+            }
+            .newMed{
+                border-radius: 15px;
+                height: 150px;
+                width: 300px;
+                padding-top: 60px;
+                background: radial-gradient(circle, rgba(231,120,120,1) 0%, rgba(242,239,100,1) 100%);    
+                margin-left:37%;
+            }
+            .myMed:hover , .newMed:hover{
+                background: radial-gradient(circle, rgba(231,120,1,1) 0%, rgba(217,15,15,1) 100%);
+                color: white;
+                font-weight: bold;
+            }
+            .myMed{
+                border-radius: 15px;
+                height: 150px;
+                width: 300px;
+                padding-top: 60px;
+                background: radial-gradient(circle, rgba(231,120,120,1) 0%, rgba(242,239,100,1) 100%); 
+                margin-left:5%;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <header class="p-3 bg-dark text-white">
+        <div class="row">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+            </a>
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <img src="Source/pro.jfif" class="navPro">
+              <li><a href="dash.html" class="nav-link px-2 text-white ">DASHBOARD</a></li>
+              <li><a href="notice.html" class="nav-link px-2 text-white">NOTICE</a></li>
+              <li><a href="food.html" class="nav-link px-2 text-white">FOOD ORDER</a></li>
+              <li><a href="#" class="nav-link px-2 text-white active">ATTENDENCE</a></li>
+            </ul>
+              <div class="" style="position: absolute;left:48%;font-size: 25px;">TECMIS</div>
+            <div class="col-md-5">
+                <div>
+                    <a href="index.html" class="nav-link px-2 text-white logoutMe" data-bs-toggle="modal" data-bs-target="#exampleModal">LOGOUT</a>
+                  </div>
+                <div class="text-end">
+
+                  <img src="Source/logo.png" class="logo" style="width: 10%;">
+                </div>
+              </div>
+          </div>
+        </div>
+      </header>
+        <script>
+            function adClick(x){
+                
+                
+               switch(x){
+                    case "jp":
+                        $('#gpA').hide(1000);
+                        $('#hciA').hide(1000); 
+                        $('#jpA').toggle(1000);   
+                    break;
+                    case "hci":
+                        $('#gpA').hide(1000);
+                        $('#jpA').hide(1000); 
+                        $('#hciA').toggle(1000);
+                    break;
+                    case "gp":
+                        $('#jpA').hide(1000);
+                        $('#hciA').hide(1000); 
+                        $('#gpA').toggle(1000);
+                    break;
+                    case "bevarage":
+                    break;     
+                }
+            }
+            function detailsFun(x){
+                switch(x){
+                    case "ER":
+                        //$('#gpA').hide(1000);
+                        $('#medDiv').hide(1000)
+                        $('.attTopic').toggle(1000); 
+                        $('#tableAtt').toggle(1000);   
+                    break;  
+                    case "VR":
+                        $('.attTopic').hide(1000); 
+                        $('#tableAtt').hide(1000); 
+                        $('#medDiv').toggle(1000)
+                    break;
+                }
+            }
+            
+             function areaMed(){
+                    $('#sem1PP').toggle(1000);
+                }
+            
+            function addmed(){
+                alert("Medical Added Succesfully");
+            }
+        </script>
+        <div class="container">
+            <div class="row" style="padding-top: 5%">
+                <div class="col-md-6 ">
+                    <div class="col-md-3 dd text-center" id="ER" onclick="detailsFun(this.id)" style="margin-right:1%;">ATTENDENCE</div>
+                </div>
+               
+                <div class="col-md-6">
+                    <div class="col-md-3 dd text-center" id="VR" onclick="detailsFun(this.id)" style="margin-right:1%;">MEDICAL</div>
+                </div>
+            </div>
+            
+            <!--Medical-->
+            <div class="row" style="padding-top: 5%;">
+                <div class="container" id="medDiv" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-12 text-center"><h4>MEDICAL MANAGEMENT</h4></div>
+                    </div>
+                    <div class="row" style="padding-top: 2%;">
+                        <div class="col-md-6"> 
+                            <div class="newMed text-center" data-bs-toggle="modal" data-bs-target="#exampleModal"  >
+                                ADD NEW
+                            </div>
+                        </div>
+                        <div class="col-md-6" onclick="areaMed()">
+                            <div class="myMed text-center">
+                                VIEW MEDICALS
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--ATTENDENCE-->
+            <div class="row" style="padding-top: 5%">
+                <div class="col-md-12 text-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <span class="attTopic" style="display: none;">Attendence</span>
+                            </div>
+                        </div>
+                        <table class="table table-striped" cellpadding="5" id="tableAtt" style="display: none;">
+                            
+                            <tr class="att" id="jpAtt">
+                                <td>
+                                    <div class="row">
+                                        <div class="" id="jp" onclick="adClick(this.id)">ICT 3113 - Advanced Java Programming</div>
+                                    </div>
+                                    <div class="row" id="jpA" style="padding-bottom: 2%; padding-top: 2%; display: none;">
+                                        <div class="bg">
+                                            <div class="atTopM text-center">
+                                                50%
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <div class="row">
+                                        <div class="" id="hci" onclick="adClick(this.id)">ICT 3123 - Human Computer Interaction</div>
+                                    </div>
+                                    <div class="row" id="hciA" style="padding-bottom: 2%; padding-top: 2%;display: none;">
+                                        <div class="bg">
+                                            <div class="atTopD text-center">
+                                                30%
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                           <tr>
+                                <td>
+                                    <div class="row">
+                                        <div class="" id="gp" onclick="adClick(this.id)">ICT 3124 - Group Project</div>
+                                    </div>
+                                    <div class="row" id="gpA" style="padding-bottom: 2%; padding-top: 2%;display: none;">
+                                        <div class="bg">
+                                            <div class="atTopOK text-center">
+                                                80%
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                           
+                            <tr>
+                                <td>
+                                    <div class="" id="hrm" onclick="adClick(this.id)">ICT 3143 - Human Resource Management</div>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <div class="" id="en" onclick="adClick(this.id)">ICT 3153 - English</div>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="" id="st" onclick="adClick(this.id)">ICT 3163 - Software Testing</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <!-- Medical -->
+        <!-- Modal -->
+        <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">ADD MEDICAL</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                    <form class="">
+                        <label>Reason</label>
+                        <input type="text" placeholder="Reason..." class="form-control">
+                        <br>
+                        <label>Subject</label>
+                        <select class="form-control">
+                            <option>ICT 3113 - Advanced Programming</option>
+                            <option>ICT 3123 - Human Computer Interaction</option>
+                        </select>
+                        <label>Date</label>
+                        <input type="date" class="form-control">
+                        <br>
+                        <label>Medical</label>
+                        <input type="file" class="form-control">
+                    </form>
+                    <div class="row">
+                        <div class="col-md-4 offset-1" ><button type="button" style="width:100%;" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button></div>
+                        <div class="col-md-4 offset-1" ><a type="button" href="index.html" class="btn btn-success" data-bs-dismiss="modal" style="width:100%;" onclick="addmed()">SUBMIT</a></div></div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        
+        
+        <div class="container" style="display: none;" id="sem1PP">
+            <div class="pastpaper">
+                <div class="row text-center"><h3>SUBMITTED MEDICALS</h3></div>
+                <div class="container" >
+                    <div class="row">
+                        <table class="table" >
+                            <thead class="thead-dark">
+                                <tr>
+                                    <td>Date</td>
+                                    <td>Time</td>
+                                    <td >Reason</td>
+                                    <td >Attechments</td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>2022-01-05</td>
+                                <td>10:15:30</td>
+                                <td >Fever</td>
+                                <td ><a href="" class="dAref">View</a></td>
+                            </tr>
+                             <tr>
+                                <td>2022-02-15</td>
+                                <td>13:15:30</td>
+                                <td>Fever</td>
+                                <td ><a href="" class="dAref">View</a></td>
+                            </tr>
+                              <tr>
+                                <td>2022-02-15</td>
+                                <td>13:15:30</td>
+                                <td>Fever</td>
+                                <td ><a href="" class="dAref">View</a></td>
+                            </tr>
+                              <tr>
+                                <td>2022-02-15</td>
+                                <td>13:15:30</td>
+                                <td>Fever</td>
+                                <td ><a href="" class="dAref">View</a></td>
+                            </tr>
+                              <tr>
+                                <td>2022-02-15</td>
+                                <td>13:15:30</td>
+                                <td>Fever</td>
+                                <td ><a href="" class="dAref">View</a></td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+                        <div class="container">
+                            <div class="pastpaper" style="display: none;padding-top: 5%;" id="medicalsTbl">
+                                        <div class="row text-center"><h3>LEVEL 1 SEMESTER 1</h3></div>
+                                        <div class="container" >
+                                            <div class="row">
+                                                <table class="table" >
+                                                    <thead class="thead-dark">
+                                                        <tr>
+                                                            <td>Subject ID</td>
+                                                            <td>Subject Name</td>
+                                                            <td class="text-center">Year</td>
+                                                            <td class="text-center">Paper</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tr>
+                                                        <td>ICT1123</td>
+                                                        <td>Subject 1</td>
+                                                        <td class="text-center">2017</td>
+                                                        <td class="text-center"><a href="" class="dAref">Download</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>ICT1133</td>
+                                                        <td>Subject 2</td>
+                                                        <td class="text-center">2017</td>
+                                                        <td class="text-center"><a href="" class="dAref">Download</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>ICT1143</td>
+                                                        <td>Subject 3</td>
+                                                        <td class="text-center">2017</td>
+                                                        <td class="text-center"><a href="" class="dAref">Download</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>ICT1123</td>
+                                                        <td>Subject 1</td>
+                                                        <td class="text-center">2018</td>
+                                                        <td class="text-center"><a href="" class="dAref">Download</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>ICT1133</td>
+                                                        <td>Subject 2</td>
+                                                       <td class="text-center">2018</td>
+                                                        <td class="text-center"><a href="" class="dAref">Download</a></td>
+                                                    </tr>
+                                                </table>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+        
+        
+        
+        <div class="footer topFooter" style="margin-top:10%;">
+            <div class="container">
+                <div class="row">
+              
+                    <div class="row">
+                    <div class="col-md-3">
+                      <h3>By Admin</h3>
+                      <p>Welcome to the TECMIS of the faculty of technology, University of Ruhuna</p>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-2">
+                    <h3>Useful Links</h3>
+                    <div><a href="" class="link">TECLIS</a></div>
+                    <div><a href="" class="link">TECHMS</a></div>
+                    <div><a href="" class="link">TECWEB</a></div>
+                    <div><a href="" class="link">Faculty of Technology</a></div>
+                    <div><a href="" class="link">University of Ruhuna</a></div>
+                    </div>
+                    <div class="col-md-3 ">
+                    <img src="Source/logo.png" style="width:100px;margin-left: 100%" class="logoT">
+
+                    </div>
+                    </div>
+            
+                </div>
+              </div>
+          </div>
+
+          <footer class="fixedFooter">
+              FACULTY OF TECHNNOLOGY - UNIVERSITY OF RUHUNA
+          </footer>
+    </body>
+</html>

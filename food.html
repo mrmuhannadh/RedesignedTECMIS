@@ -1,0 +1,620 @@
+<html>
+    <head>
+        <!--Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" ></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+        <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+        
+        <title>
+            TECMIS-FOT
+        </title>
+        <style>
+            body{
+                font-family: candara;
+                background: linear-gradient(90deg, rgba(247,247,247,1) 0%, rgba(238,238,238,1) 0%, rgba(245,244,244,1) 100%);
+            }
+            .selrow{
+                 margin-top:5%;
+            }
+            .myPro{
+                border-radius: 50%;
+                width:200px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+            .mentorD{
+                background: white;
+                margin-top:5%;
+                margin-right:5%;
+                padding-top: 10px;
+                padding-left: 20px;
+                border-radius: 5px;
+                outline: 2px solid #b0986d;
+                outline-offset: 5px; 
+            }
+            .details{
+                margin-top:40px;
+                margin-left: 10px;
+            }
+            .tdOne{
+                color:gray;
+                
+            }
+            .btnload{
+                background: lightgrey;
+                color:grey;
+            }
+            .vM{
+                display: none;
+            }
+            .dd{
+                background: radial-gradient(circle, rgba(74,198,157,1) 0%, rgba(47,130,108,1) 51%, rgba(16,17,17,1) 100%);
+                color:white;
+                font-weight: bold;
+                border-radius: 20px;
+            }
+            .dd:hover{
+                background: radial-gradient(circle, rgba(13,13,13,0.989233193277311) 1%, rgba(6,73,66,1) 50%, rgba(25,88,65,1) 100%);
+                color:white;
+                font-weight: bold;
+                border-radius: 20px;
+            }
+            #ER{
+                height: 150px;
+                width: 200px;
+                padding-top: 60px;
+                
+            }
+            #CR{
+                height: 150px;
+                width: 200px;
+                padding-top: 60px;
+            }
+            #VR{
+                height: 150px;
+                width: 200px;
+                padding-top: 60px;
+            }
+            .hDet{
+                font-size: 20px;
+            }
+            .btI{
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+            }
+            .result{
+                border-radius: 5px;
+                outline: 2px solid #b0986d;
+                outline-offset: 5px; 
+                margin-top: 5%;
+            }
+            .luck {
+              animation: blinker 1s linear infinite;
+            }
+
+            @keyframes blinker {
+              50% {
+                opacity: 0;
+              }
+            }
+            
+            /*footer*/
+            .imgCol{
+                background-image: url(Source/download.jfif);
+                overflow: hidden;
+                opacity: 0.6;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                border-radius: 10px;
+            }
+            .fixedFooter{
+                width: 100%;
+                background-color: rgb(0, 0, 0);
+                height: 7%;
+                color:white;
+                text-align: center;
+                font-size: 15px;
+                padding-top:1%;
+                position: fixed;
+                bottom: 0;
+            }
+            .topFooter{
+
+                bottom: 10%;
+                padding: 2% 0 2% 0;
+                width: 100%;
+                background: linear-gradient(90deg, rgba(55,57,57,1) 0%, rgba(17,98,77,1) 55%, rgba(2,78,63,1) 100%);
+                color:white;
+            }
+            .link{
+                color:white;
+                font-size: 14px;
+                text-decoration: none;
+            }
+            .link:hover{
+                text-decoration: underline;
+                color: white;
+            }
+            .link:active{
+                color: white;
+            }
+            .active{
+                text-decoration: underline;
+                font-weight: bold;
+            }
+            .search{
+                margin-top:3%;
+                margin-left:35%;
+            }
+            .navPro{
+                border-radius: 50%;
+                width:40px;
+                margin-right: 10px;
+            }
+            .logoutMe{
+                position: absolute;
+                left:88%;
+                top:4%;
+            }
+            .logoutMe:hover{
+                color:red;  
+                font-weight: bold;
+                
+            }
+            input[type="radio"]{
+              display: none;
+            }
+            input[type=radio] + label>img {
+              border: 1px dashed #444;
+              width: 150px;
+              height: 150px;
+              transition: 500ms all;
+            }
+            input[type=radio]:checked + label>img {
+              border: 1px solid #fff;
+              box-shadow: 0 0 3px 3px red;
+            }
+            input[type=radio]:checked + label>img {
+              transform: 
+                  scale(1.1, 1.1);
+                
+            }
+        </style>
+    </head>
+    <body>
+        
+        <header class="p-3 bg-dark text-white">
+        <div class="row">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+            </a>
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <img src="Source/pro.jfif" class="navPro">
+              <li><a href="dash.html" class="nav-link px-2 text-white ">DASHBOARD</a></li>
+              <li><a href="notice.html" class="nav-link px-2 text-white">NOTICE</a></li>
+              <li><a href="#" class="nav-link px-2 text-white active">FOOD ORDER</a></li>
+              <li><a href="attendence.html" class="nav-link px-2 text-white">ATTENDENCE</a></li>
+            </ul>
+              <div class="" style="position: absolute;left:48%;font-size: 25px;">TECMIS</div>
+            <div class="col-md-5">
+                <div>
+                    <a href="" class="nav-link px-2 text-white logoutMe" data-bs-toggle="modal" data-bs-target="#exampleModal">LOGOUT</a>
+                  </div>
+                <div class="text-end">
+
+                  <img src="Source/logo.png" class="logo" style="width: 10%;">
+                </div>
+              </div>
+          </div>
+        </div>
+      </header>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12" style="padding-top: 3%;padding-bottom: 3%;"><h3>CANTEEN FOOD ORDER</h3></div>
+            </div>
+            <div class="row">
+                 <div class="col-md-3">
+                     <input type="radio" id="bf" name="food"/>
+                     <label for="bf" ><img src="Source/bf.jpg" style="width:150px;" id="break" onclick="functionFood(this.id)"/></label>
+                     <div class="row">
+                        <div class="col-md-7 text-center">
+                            BREAK FAST
+                         </div>
+                     </div>
+                </div>
+                <div class="col-md-3">
+                     <input type="radio" id="lu" name="food"/>
+                     <label for="lu" ><img src="Source/lu.jpg" style="width:150px;" id="lunch" onclick="functionFood(this.id)"/></label>
+                    <div class="row">
+                        <div class="col-md-7 text-center">
+                            LUNCH
+                         </div>
+                     </div>
+                </div>
+                <div class="col-md-3">
+                     <input type="radio" id="din" name="food"/>
+                     <label for="din"><img src="Source/dinner.jpg" style="width:150px;"  id="dinner" onclick="functionFood(this.id)"/></label>
+                    <div class="row">
+                        <div class="col-md-7 text-center">
+                            DINNER
+                         </div>
+                     </div>
+                </div>
+                <div class="col-md-3">
+                     <input type="radio" id="beva" name="food"/>
+                     <label for="beva" ><img src="Source/beva.jpg" style="width:150px;" id="bevarage" onclick="functionFood(this.id)"/></label>
+                    <div class="row">
+                        <div class="col-md-7 text-center">
+                            BEAVERAGE
+                         </div>
+                     </div>
+                </div>
+            
+        </div>
+            <div class="row breakfastFoods" style="padding-top: 5%;display: none">
+                <h3>Breakfast Foods</h3>
+                <div class="row">
+                    <div class="col-md-3"><img src="Source/bf/parata.jpg" data-bs-toggle="modal" data-bs-target="#exampleModalFood" onclick="selectedFood(this.id)" id="parata" style="width:150px;"></div>
+                    <div class="col-md-3"><img src="Source/bf/idiya.jpg" data-bs-toggle="modal" data-bs-target="#exampleModalFood" onclick="selectedFood(this.id)" id="idiya" style="width:150px;"></div>
+                    <div class="col-md-3"><img src="Source/bf/pittu.jpg" data-bs-toggle="modal" data-bs-target="#exampleModalFood" onclick="selectedFood(this.id)"  id="pittu" style="width:150px;"></div>
+                    <div class="col-md-3"><img src="Source/bf/rc.jpg" data-bs-toggle="modal" data-bs-target="#exampleModalFood" onclick="selectedFood(this.id)" id="rc" style="width:150px;"></div>
+                </div>
+            </div>
+            <div class="row lunchFoods" style="padding-top: 5%;display: none">
+                <h3>Lunch Foods</h3>
+                <div class="row">
+                    <div class="col-md-3"><img src="Source/li/7.2_1_.jpg" onclick="selectedFood(this.id)" data-bs-toggle="modal" data-bs-target="#exampleModalFood" id="nasi" style="width:150px;"></div>
+                    <div class="col-md-3"><img src="Source/li/c230fe1003a8eb7c81a29a11e436965f.jpg" data-bs-toggle="modal" data-bs-target="#exampleModalFood" onclick="selectedFood(this.id)" id="fish" style="width:150px;"></div>
+                    <div class="col-md-3"><img src="Source/li/Indian-Curry-Chicken-Recipe-1200-EatSimpleFood.com_.jpg"  data-bs-toggle="modal" data-bs-target="#exampleModalFood" onclick="selectedFood(this.id)" id="chiken" style="width:150px;"></div>
+                    <div class="col-md-3"><img src="Source/bf/rc.jpg" data-bs-toggle="modal" data-bs-target="#exampleModalFood" onclick="selectedFood(this.id)" id="rc" style="width:150px;"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function functionCal(){
+                $('#cal').toggle(500);
+            }
+        </script>
+        <div class="row" style="padding-top: 5%;">
+            <div class="col-md text-center" >
+                <button class="btn btn-default" style="border:1px solid green" onclick="functionCal()">
+                    MY ORDERS
+                </button>
+            </div>
+        </div>
+        
+        
+<div class="container" style="display: none;margin-top:3%;" id="cal">
+	<div class="row">
+        <div class="col-md-3">
+        <div class="span12">
+    		<table class="table-condensed table-bordered table-striped">
+                <thead>
+                    <tr>
+                      <th colspan="7">
+                        <span class="btn-group">
+                            <a class="btn"><i class="icon-chevron-left"></i></a>
+                        	<a class="btn active">February 2012</a>
+                        	<a class="btn"><i class="icon-chevron-right"></i></a>
+                        </span>
+                      </th>
+                    </tr>
+                    <tr>
+                        <th>Su</th>
+                        <th>Mo</th>
+                        <th>Tu</th>
+                        <th>We</th>
+                        <th>Th</th>
+                        <th>Fr</th>
+                        <th>Sa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="muted">29</td>
+                        <td class="muted">30</td>
+                        <td class="muted">31</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td class="btn-danger" id="18" onclick="myFunD(this.id)">18</td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td class="btn-primary" id="20" onclick="myFunD(this.id)"><strong>20</strong></td>
+                        <td class="btn-success" id="21" onclick="myFunD(this.id)">21</td>
+                        <td class="btn-success" id="22" onclick="myFunD(this.id)">22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td class="muted">1</td>
+                        <td class="muted">2</td>
+                        <td class="muted">3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+        <script>
+            function myFunD(x){
+                $('#listOF').toggle(1000);
+            }
+            
+            function funtionUP(){
+                alert("FOOD LIST UPDATED");
+            }
+        </script>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="btn btn-primary" style="width: 9px;height: 25px">
+                    </div>&nbsp;Today
+
+                </div>
+                <div class="row" style="margin-top:4px;">
+                    <div class="btn btn-warning" style="width: 9px;height: 25px">
+                    </div>&nbsp;Not Ordered for whole day
+                </div>
+                <div class="row" style="margin-top:4px;">
+                    <div class="btn btn-success" style="width: 9px;height: 25px">
+                    </div>&nbsp;Ordered for whole day
+                </div>
+                <div class="row" style="margin-top:4px;">
+                    <div class="btn btn-danger" style="width: 9px;height: 25px">
+                    </div>&nbsp;Not paid
+                </div>
+            </div>
+        <div class="col-md" style="display: none;" id="listOF">
+            <div class="row">
+                <div class="col text-center">
+                    <h5>ORDER DETAILS - 21</h5>
+                    <table class="table ">
+                        <thead class="thead-dark">
+                            <tr >
+                                <th>
+                                    
+                                </th>
+                                <th>
+                                    FOOD
+                                </th>
+                                <th>
+                                    QUANTITY
+                                </th>
+                                <th>
+                                    AMOUNT
+                                </th>
+                            </tr>
+                        </thead>
+                            <tr>
+                                <th style="padding-bottom: 20px;">
+                                    BREAK FAST
+                                </th>
+                                
+                                 <td>
+                                    <select class="form-control" style="height: 40px">
+                                        <option>PARATA</option>
+                                        <option>ROTTI</option>
+                                        <option>IDIYAPPAN</option>
+                                     </select>
+                                </td>
+                                <td>
+                                    <input type="number" class="form-control" style="width: 70px; height: 40px" placeholder="4">
+                                </td>
+                                <td>
+                                    <input type="number" class="form-control" style="width: 100px; height: 40px" placeholder="Rs. 200">
+                                </td>
+                            </tr>
+                           <tr>
+                                <th style="padding-bottom: 20px;">
+                                    LUNCH
+                                </th>
+                                
+                                 <td>
+                                    <select class="form-control" style="height: 40px">
+                                        <option>RICE AND CURRY</option>
+                                        <option>RICE</option>
+                                        <option>ROTTI</option>
+                                     </select>
+                                </td>
+                                <td>
+                                    <input type="number" class="form-control" style="width: 70px; height: 40px" placeholder="1">
+                                </td>
+                                <td>
+                                    <input type="number" class="form-control" style="width: 100px; height: 40px" placeholder="Rs. 120">
+                                </td>
+                            </tr>
+                           <tr>
+                                <th style="padding-bottom: 20px;">
+                                    DINNER
+                                </th>
+                                
+                                 <td>
+                                    <select class="form-control" style="height: 40px">
+                                        <option>RICE AND CURRY</option>
+                                        <option>RICE</option>
+                                        <option selected>KOTTU</option>
+                                     </select>
+                                </td>
+                                <td>
+                                    <input type="number" class="form-control" style="width: 70px; height: 40px" placeholder="1">
+                                </td>
+                                <td>
+                                    <input type="number" class="form-control" style="width: 100px; height: 40px" placeholder="Rs. 120">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="padding-bottom: 20px;">
+                                    OTHER
+                                </th>
+                                
+                                 <td>
+                                    <select class="form-control" style="height: 40px">
+                                        <option>PEPSI</option>
+                                        <option>7 UP</option>
+                                        <option>EGB</option>
+                                     </select>
+                                </td>
+                                <td>
+                                    <input type="number" class="form-control" style="width: 70px; height: 40px" placeholder="2">
+                                </td>
+                                <td>
+                                    <input type="number" class="form-control" style="width: 100px; height: 40px" placeholder="Rs. 150">
+                                </td>
+                            </tr>
+                        
+                    </table>
+                </div>
+                <div class="row">
+                        <div class="col-md-12" style="margin-left:65%">
+                            <button class="btn btn-danger">RESET</button>
+                            <button class="btn btn-success" onclick="funtionUP()">UPDATE</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="footer topFooter" style="margin-top:10%;">
+            <div class="container">
+            <div class="row">
+                <div class="row">
+                <div class="col-md-3">
+                  <h3>By Admin</h3>
+                  <p>Welcome to the TECMIS of the faculty of technology, University of Ruhuna</p>
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-2">
+                <h3>Useful Links</h3>
+                <div><a href="" class="link">TECLIS</a></div>
+                <div><a href="" class="link">TECHMS</a></div>
+                <div><a href="" class="link">TECWEB</a></div>
+                <div><a href="" class="link">Faculty of Technology</a></div>
+                <div><a href="" class="link">University of Ruhuna</a></div>
+                </div>
+                <div class="col-md-3 ">
+                <img src="Source/logo.png" style="width:100px;margin-left: 100%" class="logoT">
+
+                </div>
+                </div>
+            
+            </div>
+          </div>
+          </div>
+          <footer class="fixedFooter">
+              FACULTY OF TECHNNOLOGY - UNIVERSITY OF RUHUNA
+          </footer>
+        <script>
+            function functionFood(x){
+                
+                switch(x){
+                    case "break":
+                        $('.lunchFoods').hide(1000);  
+                        $('.breakfastFoods').toggle(1000);   
+                    break;
+                    case "lunch":
+                        $('.breakfastFoods').hide(1000); 
+                        
+                        $('.lunchFoods').toggle(1000);  
+                    break;
+                    case "dinner":
+                    break;
+                    case "bevarage":
+                    break;     
+                }
+            }
+            function selectedFood(x){
+                
+                $('#nameofFood').html(x);
+            }
+            
+            function orderFood(x){
+                alert("Food: "+x+" Ordered Successfully");
+            }
+        </script>
+         <!-- Modal logout-->
+        <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">LOGOUT</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 offset-1" ><button type="button" style="width:100%;" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button></div>
+                        <div class="col-md-4 offset-1" ><a type="button" href="index.html" class="btn btn-danger" data-bs-dismiss="modal" style="width:100%;">LOGOUT</a></div></div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+         <!-- Modal -->
+        <div class="modal fade " id="exampleModalFood" tabindex="-1" aria-labelledby="exampleModalFoodLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalFoodLabel">ORDER THE FOOD <span id="nameofFood"></span></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                         <div class="form-group">
+                            <label for="exampleInputEmail1">When to Order</label>
+                            <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">Make sure the date is correct</small>
+                          </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">How many pieces</label>
+                            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">Select the amount you want</small>
+                          </div>
+                        <div class="form-group" >
+                            <label for="exampleInputEmail1">Price</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Rs: ###" disabled>
+                            <small id="emailHelp" class="form-text text-muted">The amount you may have to pay</small>
+                          </div>
+                        <div class="row" style="margin-top: 5%;">
+                            <div class="col-md-4 offset-1" ><button type="button" style="width:100%;" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button></div>
+                        <div class="col-md-4 offset-1" ><a type="button" href="index.html" id="Parata" class="btn btn-success" data-bs-dismiss="modal" style="width:100%;" onclick="orderFood(this.id)">ORDER</a></div></div>
+                        </div>
+                        
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </body>
+</html>
